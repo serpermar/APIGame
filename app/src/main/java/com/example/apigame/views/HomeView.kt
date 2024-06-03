@@ -91,7 +91,6 @@ fun ContentHomeView(viewModel: GamesViewModel, pad: PaddingValues, navController
                         }
                     }
                 }
-
                 is LoadState.Error -> {
                     item {
                         Text(text = "Load Error")
