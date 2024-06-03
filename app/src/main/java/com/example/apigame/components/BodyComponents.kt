@@ -61,7 +61,7 @@ fun MainTopBar(
 ) {
 
     TopAppBar(
-        title = { Text(text = title, color = Color.Blue, fontWeight = FontWeight.ExtraBold) },
+        title = { Text(text = title, color = Color.White, fontWeight = FontWeight.ExtraBold) },
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = Color(COLOR_1)
         ),
