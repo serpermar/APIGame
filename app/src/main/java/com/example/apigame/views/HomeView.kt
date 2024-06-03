@@ -59,24 +59,6 @@ fun ContentHomeView(viewModel: GamesViewModel, pad: PaddingValues, navController
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
-        TextField(
-            value = search,
-            onValueChange = { search = it },
-            label = { Text(text = "Search") },
-            keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Done
-            ),
-            keyboardActions = KeyboardActions(
-                onDone = {
-                    val zero = 0
-                    navController.navigate("DetailView/${zero}/?${search}")
-                }
-            ),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 10.dp, end = 10.dp)
-        )
         LazyColumn(
             modifier = Modifier
                 .background(Color(COLOR_1))
@@ -95,7 +77,7 @@ fun ContentHomeView(viewModel: GamesViewModel, pad: PaddingValues, navController
                     )
                 }
             }
-            when(gamesPage.loadState.append){
+            when (gamesPage.loadState.append) {
                 is LoadState.NotLoading -> Unit
                 LoadState.Loading -> {
                     item {
@@ -109,6 +91,7 @@ fun ContentHomeView(viewModel: GamesViewModel, pad: PaddingValues, navController
                         }
                     }
                 }
+
                 is LoadState.Error -> {
                     item {
                         Text(text = "Load Error")
