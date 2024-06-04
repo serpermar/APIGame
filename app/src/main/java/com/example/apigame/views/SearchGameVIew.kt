@@ -60,7 +60,8 @@ fun SearchGameView(viewModel: GamesViewModel, navController: NavController) {
                 Text(text = it.name,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(bottom = 10.dp, start = 10.dp)
+                    modifier = Modifier
+                        .padding(bottom = 10.dp, start = 10.dp)
                         .clickable {
                             navController.navigate("DetailView/${it.id}")
                         }
