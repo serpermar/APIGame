@@ -50,6 +50,8 @@ import com.example.apigame.model.GameList
 import com.example.apigame.util.Constants.Companion.COLOR_1
 import com.example.apigame.util.Constants.Companion.COLOR_2
 import com.example.apigame.util.Constants.Companion.COLOR_3
+import com.example.apigame.util.Constants.Companion.COLOR_4
+import com.example.apigame.util.Constants.Companion.COLOR_5
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,9 +63,9 @@ fun MainTopBar(
 ) {
 
     TopAppBar(
-        title = { Text(text = title, color = Color.White, fontWeight = FontWeight.ExtraBold) },
+        title = { Text(text = title, color = Color(COLOR_4), fontWeight = FontWeight.ExtraBold) },
         colors = TopAppBarDefaults.mediumTopAppBarColors(
-            containerColor = Color(COLOR_1)
+            containerColor = Color(COLOR_5)
         ),
         navigationIcon = {
             if (showBackButton) {
@@ -72,7 +74,7 @@ fun MainTopBar(
                         imageVector =
                         Icons.Default.ArrowBack,
                         contentDescription = "Go back button",
-                        tint = Color(COLOR_2)
+                        tint = Color(COLOR_4)
                     )
                 }
             }
@@ -84,7 +86,7 @@ fun MainTopBar(
                         imageVector =
                         Icons.Default.Search,
                         contentDescription = "Go back button",
-                        tint = Color(COLOR_2)
+                        tint = Color(COLOR_4)
                     )
                 }
             }
@@ -128,7 +130,7 @@ fun MetaWebsite(url: String) {
     Column {
         Text(
             text = "METASCORE",
-            color = Color.White,
+            color = Color(COLOR_4),
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
             modifier = Modifier
@@ -136,7 +138,7 @@ fun MetaWebsite(url: String) {
         )
         Button(
             onClick = { context.startActivity(intent) }, colors = ButtonDefaults.buttonColors(
-                contentColor = Color.White,
+                contentColor = Color(COLOR_4),
                 containerColor = Color(COLOR_2)
             )
         ) {

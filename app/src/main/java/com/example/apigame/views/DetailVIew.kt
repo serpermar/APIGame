@@ -26,6 +26,7 @@ import com.example.apigame.components.MainTopBar
 import com.example.apigame.components.MetaWebsite
 import com.example.apigame.components.ReviewCard
 import com.example.apigame.util.Constants.Companion.COLOR_1
+import com.example.apigame.util.Constants.Companion.COLOR_4
 import com.example.apigame.viewModel.GamesViewModel
 
 
@@ -81,7 +82,7 @@ fun ContentDetailView(pad: PaddingValues, viewModel: GamesViewModel) {
         val scroll = rememberScrollState(0)
         Text(
             text = state.description_raw,
-            color = Color.White,
+            color = Color(COLOR_4),
             textAlign = TextAlign.Justify,
             modifier = Modifier
                 .padding(start = 15.dp, end = 15.dp, bottom = 10.dp)
