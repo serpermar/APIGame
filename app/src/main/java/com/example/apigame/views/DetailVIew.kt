@@ -31,13 +31,9 @@ import com.example.apigame.viewModel.GamesViewModel
 
 
 @Composable
-fun DetailView(viewModel: GamesViewModel, navController: NavController, id: Int, name:String?) {
+fun DetailView(viewModel: GamesViewModel, navController: NavController, id: Int) {
     LaunchedEffect(Unit) {
-        if (id == 0) {
-            name?.let { viewModel.getGameByName(it.replace(" ", "-")) }
-        } else{
-            viewModel.getGameById(id)
-        }
+        viewModel.getGameById(id)
     }
 
     DisposableEffect(Unit) {

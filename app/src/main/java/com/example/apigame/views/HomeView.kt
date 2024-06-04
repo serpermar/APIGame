@@ -67,7 +67,7 @@ fun ContentHomeView(viewModel: GamesViewModel, pad: PaddingValues, navController
                 val item = gamesPage[index]
                 if (item != null) {
                     CardGame(item) {
-                        navController.navigate("DetailView/${item.id}/?${search}")
+                        navController.navigate("DetailView/${item.id}")
                     }
                     Text(
                         text = item.name,
