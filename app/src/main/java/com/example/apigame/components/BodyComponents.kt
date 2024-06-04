@@ -85,7 +85,7 @@ fun MainTopBar(
                     Icon(
                         imageVector =
                         Icons.Default.Search,
-                        contentDescription = "Go back button",
+                        contentDescription = "Search",
                         tint = Color(COLOR_4)
                     )
                 }
